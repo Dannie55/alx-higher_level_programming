@@ -1,67 +1,114 @@
-![image](https://user-images.githubusercontent.com/105589308/204417291-b6a74958-798d-4005-be19-241bebb00fd3.png)
-
-# Zen (Python) 
-
->Not sure if C has taught me to think like a programmer or python is just really easy.
-
-<details>
-<summary>The Zen of Python, by Tim Peters</summary>
-<br>
-Beautiful is better than ugly.<br>
-Explicit is better than implicit.<br>
-Simple is better than complex.<br>
-Complex is better than complicated.<br>
-Flat is better than nested.<br>
-Sparse is better than dense.<br>
-Readability counts.<br>
-Special cases aren't special enough to break the rules.<br>
-Although practicality beats purity.<br>
-Errors should never pass silently.<br>
-Unless explicitly silenced.<br>
-In the face of ambiguity, refuse the temptation to guess.<br>
-There should be one-- and preferably only one --obvious way to do it.<br>
-Although that way may not be obvious at first unless you're Dutch.<br>
-Now is better than never.<br>
-Although never is often better than *right* now.<br>
-If the implementation is hard to explain, it's a bad idea.<br>
-If the implementation is easy to explain, it may be a good idea.<br>
-Namespaces are one honking great idea -- let's do more of those!
-
-</details>
-
->I thought I had escaped [betty](https://github.com/holbertonschool/Betty), but here we have [PEP8](https://www.python.org/dev/peps/pep-0008/)
-
-<details>
-<summary> Install Python3, pip3 and pycodestyle</summary>
-
-- Pycodestyle is now the new standard of Python style code.
-
-<pre>$ sudo apt-get install python3 python3-pip<br>$ pip install pycodestyle</pre>
-
-- Confirm you have the right version.
-
-<pre>$ pycodestyle --version<br>$</pre>
-
-</details>
-
-## About
-
-- This repository consists of all the .Subject projects done with [ALX Africa](https://www.alxafrica.com/) Full stack Software Engineering course in partnership with [Holberton School](https://www.holbertonschool.com/) by [Dannie55](https://github.com/Dannie55)
+# 0x00. Python - Hello, World
 
 ## Resource
 
-- [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
-- [Learn to Program](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)
-- [The Python Handbook](https://www.freecodecamp.org/news/the-python-handbook/)
-- [pycodestyle](https://pypi.org/project/pycodestyle/)
+- [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) (*only the first three chapters below*)
+	- [Whetting Your Appetite](https://docs.python.org/3/tutorial/appetite.html)
+	- [Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
+	- [An Informal Introduction to Python](https://docs.python.org/3/tutorial/introduction.html) (*Read up until “3.1.2. Strings” included*)
+- [How to use string formatters in Python 3](https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3)
 
----
+## Tasks
 
-- [0x00](./0x00-python-hello_world) : Hello, World.
-- [0x01](./0x01-python-if_else_loops_functions) : if/else, loops, functions.
-- [0x02](./0x02-python-import_modules) : import & modules.
-- [0x03](./0x03-python-data_structures) : Data Structures: Lists, Tuples.
-- [0x0D](./0x0D-SQL_introduction) : SQL - Introduction.
-- [0x0E](./0x0E-SQL_more_queries) : SQL - More queries.
-- [0x10](./0x10-python-network_0) : Python - Network #0.
-- [0x11](./0x11-python-network_1) : Python - Network #1.
+0. [Run Python file](0-run) : Write a Shell script that runs a Python script.
+	- The Python file name will be saved in the environment variable `$PYFILE`
+
+	```sh
+	guillaume@ubuntu:~/py/0x00$ cat main.py 
+	#!/usr/bin/python3
+	print("Holberton School")
+
+	guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
+	```
+1. [Run inline](1-run_inline) : Write a Shell script that runs Python code.
+	- The Python code will be saved in the environment variable `$PYCODE`
+
+	```sh
+	guillaume@ubuntu:~/py/0x00$ export PYCODE='print("Holberton School: {}".format(88+10))'
+	```
+2. [Hello, print](2-print.py) : Write a Python script that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line.
+	- Use the function `print`
+3. [Print integer](3-print_number.py) : Complete the source code in order to print the integer stored in the variable `number`, followed by `Battery street`, followed by a new line.
+	- You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py)
+	- The output of the script should be:
+		- the number, followed by `Battery street`,
+		- followed by a new line.
+	- You are not allowed to cast the variable `number` into a string.
+	- Your code must be 3 lines long
+	- You have to use the new print numbers [tips](https://pyformat.info/#number) (with `.format(...)`)
+	> C is strongly typed… not in Python! The variable `number`  can be assigned to a string, a float, a bool etc… Forcing the type during a string format (`"...".format(...)`) is a way to control the type of a variable
+4. [Print float](4-print_float.py) : Complete the source code in order to print the float stored in the variable `number` with a precision of 2 digits.
+	- You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py)
+	- The output of the program should be:
+		- `Float:`, followed by the float with only two digits.
+		- Followed by a new line.
+	- You are not allowed to cast the variable `number` into a string.
+	- You have to use the new print numbers [tips](https://pyformat.info/#number) (with `.format(...)`)
+5. [Print string](5-print_string.py) : Complete the source code in order to print 3 times a string stored in the variable `str`, followed by its first 9 characters.
+	- You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py)
+	- The output of the program should be:
+		- 3 times the value of `str`
+		- followed by a new line
+		- followed by the 9 first characters of `str`
+		- followed by a new line
+	- You are not allowed to use any loops or conditional statement
+	- Your program should be maximum 5 lines long
+6. [Play with strings](6-concat.py) : Complete this source code to print `Welcome to Holberton School!`
+	- You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py)
+	- You are not allowed to use any loops or conditional statements.
+	- You have to use the variables	`str1` and `str2` in your new line of code.
+	- Your program should be exactly 5 lines long
+7. [Copy - Cut - Paste](7-edges.py) : Complete this source code.
+	- You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py)
+	- You are not allowed to use any loops or conditional statements
+	- Your program should be exactly 8 lines long
+	- `word_first_3` should contain the first 3 letters of the variable `word`
+	- `word_last_2` should contain the last 2 letters of the variable `word`
+	- `middle_word` should contain the value of the variable `word` without the first and last letters
+8. [Create a new sentence](8-concat_edges.py) : Complete this source code to print `object-oriented programming with Python`, followed by a new line.
+	- You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py)
+	- You are not allowed to use any loops or conditional statements
+	- Your program should be exactly 5 lines long
+	- You are not allowed to create new variables
+	- You are not allowed to use string literals
+9. [Easter Egg](9-easter_egg.py) : Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+	- Your script should be maximum 98 characters long (please check with `wc -m 9-easter_egg.py`)
+10 [Linked list cycle](10-check_cycle.c) Technical interview preparation:
+	- You are not allowed to google anything
+	- Whiteboard first
+	- This task and all future technical interview prep tasks will include checks for the efficiency of your solution, i.e. is your solution’s runtime fast enough, does your solution require extra memory usage / mallocs, etc.
+	- Write a function in C that checks if a singly linked list has a cycle in it.
+		- Prototype: `int check_cycle(listint_t *list);`
+		- Return: `0` if there is no cycle, `1` if there is a cycle
+	- Requirements:
+		- Only these functions are allowed: `write`, `printf`, `putchar`, `puts`, `malloc`, `free`
+	- Compile the code this way: `gcc -Wall -Werror -Wextra -pedantic 10-main.c 10-check_cycle.c 10-linked_lists.c -o cycle`
+	- Solving a problem is already a big win! but finding the best and optimal way to solve it, it’s way better! Think about the most optimal / fastest way to do it.
+  * **10. Linked list cycle**
+  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
+  contains a cycle.
+  * Returns `0` if there is no cycle and `1` if there is.
+  * Helper files:
+    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
+    [10-check_cycle.c](./10-check_cycle.c) (provided by Holberton School).
+    * [lists.h](./lists.h): Header file containing definitions and prototypes for
+    all types and functions used in [linked_lists.c](./linked_lists.c) and
+    [10-check_cycle.c](./10-check_cycle.c).
+
+11. Hello, write**
+  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
+  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
+  the function `write` from the `sys` module.
+  * Exits with a status code of `1`.
+
+12. Compile**
+  * [101-compile](./101-compile): Python script that compiles a Python script file stored
+  in the environment variable `$PYFILE` and saves it to an output file
+  `$PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
+
+13. ByteCode -> Python #1**
+  * [102-magic_calculation.py](./103-magic_calculation.py): Python function matching exactly
+  [a bytecode](https://docs.python.org/3.4/library/dis.html) provided by ALX.
+
+
+
