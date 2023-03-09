@@ -10,4 +10,3 @@ if __name__ == "__main__":
         print(f"{(len(sys.argv) - 1):d} arguments:")
     for i in range(1, len(largs)):
         print(f"{i:d}: {largs[i]}")
-
