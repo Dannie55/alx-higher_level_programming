@@ -5,9 +5,9 @@ def max_integer(my_list=[]):
     if len(my_list) == 0:
         return (None)
 
-    pig = my_list[0]
+    big = my_list[0]
     for i in range(len(my_list)):
         if my_list[i] > big:
-            pig = my_list[i]
+            big = my_list[i]
 
-    return (pig)
+    return (big)
