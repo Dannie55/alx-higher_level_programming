@@ -31,8 +31,7 @@ class Square:
         """
         return self.__size
 
-
-   @size.setter
+    @size.setter
     def size(self, value):
         """setter of __size
         Args:
