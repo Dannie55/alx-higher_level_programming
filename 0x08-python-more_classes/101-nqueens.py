@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-backtracking of nqueens program that print the coordinates of n queens
-on an nxn grid in an all non-attacking positions
+nqueens backtracking program to print the coordinates of n queens
+on an nxn grid such that they are all in non-attacking positions
 """
 
 
@@ -20,42 +20,43 @@ if __name__ == "__main__":
         print("N must be at least 4")
         exit(1)
 
-    # answer list intialization
+    # initialize the answer list
     for i in range(n):
         a.append([i, None])
 
     def already_exists(y):
-        """checks if a queen already exits in the y value"""
+        """check that a queen does not already exist in that y value"""
         for x in range(n):
             if y == a[x][1]:
                 return True
-            return False
+        return False
 
-    def reject(x, y)
-        """determines if to reject or not """
+    def reject(x, y):
+        """determines whether or not to reject the solution"""
         if (already_exists(y)):
             return False
         i = 0
         while (i < x):
-            if abs(a[i][1] - y) == abs(i -x):
+            if abs(a[i][1] - y) == abs(i - x):
                 return False
             i += 1
         return True
 
     def clear_a(x):
-        """clears the answers from the point failure"""
+        """clears the answers from the point of failure on"""
         for i in range(x, n):
             a[i][1] = None
 
     def nqueens(x):
-        """recursive backtracking function"""
+        """recursive backtracking function to find the solution"""
         for y in range(n):
             clear_a(x)
-            if rejects(x, y):
+            if reject(x, y):
                 a[x][1] = y
-                if (x == n - 1):
+                if (x == n - 1):  # accepts the solution
                     print(a)
                 else:
-                    nqueens(x + 1)
-    
+                    nqueens(x + 1)  # moves on to next x value to continue
+
+    # start the recursive process at x = 0
     nqueens(0)
