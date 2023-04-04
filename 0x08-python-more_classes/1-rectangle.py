@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-defines a rectangle with a class
+defines a class Rectangle
 """
 
 
 class Rectangle:
-    """a representation of a rectangle"""
+    """ representation of a rectangle"""
     def __init__(self, width=0, height=0):
         """intilization of a rectangle"""
         self.height = height
