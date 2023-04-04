@@ -34,8 +34,8 @@ Checking addition over multiple values:
 	 [0, 2, 6, 12, 20, 30]
 
 Checking float with int:
-	 >>> add_integer(2.1, 4)
-	 6
+	 >>> add_integer(2.1, 5)
+	 7
 
 Checking int with float:
 	 >>> add_integer(5, 7.8)

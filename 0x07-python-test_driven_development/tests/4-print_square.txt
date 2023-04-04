@@ -41,23 +41,21 @@ Checking for positive ints:
 	 ####
 	 ####
 	 ####
-	 >>> print_square(10)
-	 ##########
-	 ##########
-	 ##########
-	 ##########
-	 ##########
-	 ##########
-	 ##########
-	 ##########
-	 ##########
-	 ##########
+	 >>> print_square(8:)
+	 ########
+	 ########
+	 ########
+	 ########
+	 ########
+	 ########
+	 ########
+	 ########
 	 >>> print_square(0)
 	 >>> print_square(1)
 	 #
 
 Checking for negative ints:
-	 >>> print_square(-1)
+	 >>> print_square(-2)
 	 Traceback (most recent call last):
          ...
          ValueError: size must be >= 0
@@ -76,7 +74,7 @@ Checking for non-number types:
          ...
          TypeError: size must be an integer
 
-Checking for non-int number types:
+Checking for float types:
 	 >>> print_square(1.0)
 	 Traceback (most recent call last):
          ...
