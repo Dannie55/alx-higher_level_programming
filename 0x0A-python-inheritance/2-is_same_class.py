@@ -5,12 +5,12 @@
 def is_same_class(obj, a_class):
     """Returns true if an object is exactly aninstance of a specified class
     Args:
-	obj(any): The object to be checked.
-	a_class(type): The class to match the object to
+        obj(any): The object to be checked.
+        a_class(type): The class to match the object to
     Returns:
         if obj is exactly an inheritance of a_class - True
-	Otherwise return- False.
+        Otherwise return- False.
     """
     if type(obj) == a_class:
-	return True
+        return True
     return False
