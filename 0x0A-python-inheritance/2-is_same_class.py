@@ -11,6 +11,6 @@ def is_same_class(obj, a_class):
         if obj is exactly an inheritance of a_class - True
 	Otherwise return- False.
     """
-    if type(obj) == a_class
+    if type(obj) == a_class:
 	return True
     return False
