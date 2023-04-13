@@ -34,12 +34,12 @@ if __name__ == "__main__":
             else:
                 count += 1
 
-                line = line.split()
+            line = line.split()
 
-                try:
-                    size += int(line[-1])
-                except (IndexError, ValueError):
-                    pass
+            try:
+                size += int(line[-1])
+            except (IndexError, ValueError):
+                pass
 
             try:
                 if line[-2] in valid_codes:
@@ -50,8 +50,8 @@ if __name__ == "__main__":
             except IndexError:
                 pass
 
-            print_stats(size, status_codes)
+        print_stats(size, status_codes)
 
-            except KeyboardInterrupt:
-                print_stats(size, status_codes)
-                raise
+    except KeyboardInterrupt:
+        print_stats(size, status_codes)
+        raise
