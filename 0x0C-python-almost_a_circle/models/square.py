@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Defines a Sqaure class"""
-from models.Rectangle import Rectangle
+"""Defines a square class."""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Represents a Square"""
+    """Represent a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Intializes a new Square.
+        """Initialize a new Square.
         Args:
-            size(int): The size of the new Square.
+            size (int): The size of the new Square.
             x (int): The x coordinate of the new Square.
             y (int): The y coordinate of the new Square.
             id (int): The identity of the new Square.
@@ -18,7 +18,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """Get the Square size"""
+        """Get/set the size of the Square."""
         return self.width
 
     @size.setter
@@ -27,14 +27,14 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Updates the Square
+        """Update the Square.
         Args:
-            *args(int): New attributes value
-                - 1st argument represents the id attribute
-                - 2nd argument represents the size attribute
-                - 3rd argument represents the x attributes
-                - 4th argument represents the y attributes
-            **kwargs (dict): New keys/value
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents size attribute
+                - 3rd argument represents x attribute
+                - 4th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
             a = 0
@@ -47,10 +47,11 @@ class Square(Rectangle):
                 elif a == 1:
                     self.size = arg
                 elif a == 2:
-                    self.size = arg
+                    self.x = arg
                 elif a == 3:
-                    self.size = arg
+                    self.y = arg
                 a += 1
+
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
@@ -66,15 +67,15 @@ class Square(Rectangle):
                     self.y = v
 
     def to_dictionary(self):
-        """Return the dictionary representation of the square."""
+        """Return the dictionary representation of the Square."""
         return {
             "id": self.id,
             "size": self.width,
             "x": self.x,
             "y": self.y
-            }
+        }
 
     def __str__(self):
-        """Return the print() and str() representation of a Square"""
+        """Return the print() and str() representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
