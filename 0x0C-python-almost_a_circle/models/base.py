@@ -159,17 +159,17 @@ class Base:
                 turt.left(90)
             turt.hideturtle()
 
-            turt.color("#b53e3d8")
-            for sq in list_squares:
-                turt.showturtle()
-                turt.up()
-                turt.goto(sq.x, sq.y)
-                turt.down()
-                for i in range(2):
-                    turt.forward(sq.width)
-                    turt.left(90)
-                    turt.forward(sq.height)
-                    turt.left(90)
-                turt.hideturtle()
+       turt.color("#b53e3d8")
+       for sq in list_squares:
+           turt.showturtle()
+           turt.up()
+           turt.goto(sq.x, sq.y)
+           turt.down()
+           for i in range(2):
+               turt.forward(sq.width)
+               turt.left(90)
+               turt.forward(sq.height)
+               turt.left(90)
+               turt.hideturtle() 
 
-            turtle.exitonclick()
+        turtle.exitonclick()
