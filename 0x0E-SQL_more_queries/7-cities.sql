@@ -1,10 +1,10 @@
--- create the database hbtn_0d_usa and table cities
--- create database
-CREATE DATABASE IF NOT EXIST hbtn_0d_usa;
--- use database 
+-- creates the database hbtn_0d_usa and the table cities (in the database hbtn_0d_usa) on your MySQL server
+-- creates a database
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+-- use a database
 USE hbtn_0d_usa;
--- create table cities
-CREATE TABLES IF NOT EXIT cities (id INT UNIQUE AUTO_INCREMENT NOT NULL, 
+-- creates a table
+CREATE TABLE IF NOT EXISTS cities (id INT UNIQUE AUTO_INCREMENT NOT NULL,
 state_id INT NOT NULL,
 name VARCHAR(256) NOT NULL,
 PRIMARY KEY(id),
